@@ -160,7 +160,7 @@ if st.button("Calcular Tensões e Direções"):
         direction_cosines = T_eigvec
         
         # Principal directions in degrees
-        principal_directions = np.degrees(np.arccos(np.abs(direction_cosines)))
+        principal_directions = np.degrees(np.arccos(direction_cosines))
 
     results_col1, results_col2 = st.columns(2)
     
@@ -190,7 +190,7 @@ if st.button("Calcular Tensões e Direções"):
         dir_data = []
         for i in range(3):
             dir_data.append([
-                f"Direction {i+1}",
+                f"Direção {i+1}",
                 f"{principal_directions[0,i]:.2f}°",
                 f"{principal_directions[1,i]:.2f}°",
                 f"{principal_directions[2,i]:.2f}°"
