@@ -40,7 +40,8 @@ with col1:
         "σₓ (Tensão Normal em x)", 
         value=None,
         key="m00",
-        placeholder="σₓ"
+        placeholder="σₓ",
+        step = 50
     )
 
 with col2:
@@ -48,7 +49,8 @@ with col2:
         "τₓᵧ = τᵧₓ (Tensão Tangencial no plano xy)", 
         value=None,
         key="m01", 
-        placeholder="τₓᵧ"
+        placeholder="τₓᵧ",
+        step = 50
     )
     st.session_state.matrix[0, 1] = value_12
     st.session_state.matrix[1, 0] = value_12
@@ -58,7 +60,8 @@ with col3:
         "τₓᵣ = τᵣₓ (Tensão Tangencial no plano xz)", 
         value=None,
         key="m02",
-        placeholder="τₓᵣ"
+        placeholder="τₓᵣ",
+        step = 50
     )
     st.session_state.matrix[0, 2] = value_13
     st.session_state.matrix[2, 0] = value_13
@@ -75,7 +78,8 @@ with col2:
         "σᵧ (Tensão Normal em y)", 
         value=None,
         key="m11",
-        placeholder="σᵧ"
+        placeholder="σᵧ",
+        step = 50
     )
 
 with col3:
@@ -83,7 +87,8 @@ with col3:
         "τᵧᵣ = τᵣᵧ (Tensão Tangencial no plano yz)", 
         value=None,
         key="m12",
-        placeholder="τᵧᵣ"
+        placeholder="τᵧᵣ",
+        step = 50
     )
     st.session_state.matrix[1, 2] = value_23
     st.session_state.matrix[2, 1] = value_23
@@ -105,7 +110,8 @@ with col3:
         "σᵣ (Tensão Normal em z)", 
         value=None,
         key="m22",
-        placeholder="σᵣ"
+        placeholder="σᵣ",
+        step = 50
     )
 st.markdown("---")
 def generate_random_matrix():
